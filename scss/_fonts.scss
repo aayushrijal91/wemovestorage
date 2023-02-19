@@ -1,0 +1,38 @@
+$font-aceh: "Aceh", sans-serif;
+
+$font-body: $font-aceh;
+
+$font-families: (
+    "aceh": "Aceh",
+);
+
+@each $name,
+$font-family in $font-families {
+    .font-#{$name} {
+        font-family: $font-family, sans-serif;
+    }
+}
+
+$asset-path: "../webfonts/";
+
+/* Fonts includer */
+@mixin font-face($font-family, $font-file, $weight: "normal", $style: "normal") {
+    @font-face {
+        font-family: $font-family;
+        src: local($font-file), url($asset-path + $font-file + ".woff") format("woff"),
+            url($asset-path + $font-file + ".eot") format("embedded-opentype"),
+            url($asset-path + $font-file + ".ttf") format("truetype");
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+
+@include font-face("Aceh", "Aceh-Thin", 100);
+@include font-face("Aceh", "Aceh-ExtraLight", 200);
+@include font-face("Aceh", "Aceh-Light", 300);
+@include font-face("Aceh", "Aceh-Regular", 400);
+@include font-face("Aceh", "Aceh-Medium", 500);
+@include font-face("Aceh", "Aceh-Semibold", 600);
+@include font-face("Aceh", "Aceh-Bold", 700);
+@include font-face("Aceh", "Aceh-Extrabold", 800);
+@include font-face("Aceh", "Aceh-Black", 900);
