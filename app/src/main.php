@@ -294,7 +294,7 @@
 </section>
 
 <section class="form-1" id="form">
-    <div class="floating-get-started">get started<span class="text-teal lh-1">.</span></div>
+    <div class="floating-get-started">get started<span class="text-white lh-1">.</span></div>
     <div class="container">
         <div class="row justify-content-between">
             <div class="col-xl-6 d-none d-md-block">
@@ -560,7 +560,7 @@
                     <?php } ?>
                 </div>
                 <div class="d-flex justify-content-center d-lg-none mt-n4 position-relative">
-                    <div class="row align-items-center py-2 py-md-3 bg-secondary gx-3 gx-md-4">
+                    <div class="row align-items-center py-2 py-md-3 bg-teal gx-3 gx-md-4">
                         <div class="col-auto"><?= renderImg('google.png', 'icons') ?></div>
                         <div class="col-auto d-flex align-items-center">
                             <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -628,16 +628,16 @@
 <div class="bg-primary py-4 d-lg-none">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-auto text-tertiary fw-600 fs-32 ls-3">fill out the form below</div>
+            <div class="col-auto text-teal fw-600 fs-32 ls-3">fill out the form below</div>
             <div class="col">
-                <div class="horizontal-line bg-tertiary"></div>
+                <div class="horizontal-line bg-teal"></div>
             </div>
         </div>
     </div>
 </div>
 
 <footer>
-    <div class="floating-get-started">get started<span class="text-primary lh-1">.</span></div>
+    <div class="floating-get-started">get started<span class="text-white lh-1">.</span></div>
     <div class="container">
         <div class="row">
             <div class="col-5 col-xl-6 col-xxl-7 d-none d-lg-block">
