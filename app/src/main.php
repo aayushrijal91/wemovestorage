@@ -1,22 +1,26 @@
 <header>
-    <div class="container">
-        <div class="row justify-content-center justify-content-md-between align-items-center">
-            <div class="col-auto d-none d-md-block">
-                <a href="./">
-                    <?= renderImg("logo.png", "logo") ?>
-                </a>
-            </div>
-            <div class="col-md-auto">
-                <div class="row justify-content-center justify-content-lg-end align-items-center">
-                    <div class="col-6 col-md-auto">
-                        <a href="tel:<?= $phone_number ?>" class="btn border-white border rounded-0 text-white py-3 px-lg-4 px-xl-5">
-                            <?= $phone_number ?>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-10">
+                <div class="row justify-content-center justify-content-md-between align-items-center">
+                    <div class="col-auto d-none d-md-block">
+                        <a href="./">
+                            <?= renderImg("logo.png", "logo") ?>
                         </a>
                     </div>
-                    <div class="col-6 col-md-auto">
-                        <a href="#form" class="btn border-white border rounded-0 text-white py-3 px-lg-4 px-xl-5">
-                            enquire now
-                        </a>
+                    <div class="col-md-auto">
+                        <div class="row justify-content-center justify-content-lg-end align-items-center">
+                            <div class="col-6 col-md-auto">
+                                <a href="tel:<?= $phone_number ?>" class="btn border-white border rounded-0 text-white py-3 px-lg-4 px-xl-5">
+                                    <?= $phone_number ?>
+                                </a>
+                            </div>
+                            <div class="col-6 col-md-auto">
+                                <a href="#form" class="btn border-white border rounded-0 text-white py-3 px-lg-4 px-xl-5">
+                                    enquire now
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -599,25 +603,29 @@
     </div>
 </section>
 
-<section class="bg-tertiary py-4 d-none d-lg-block">
-    <div class="container">
-        <div class="row justify-content-center justify-content-lg-between align-items-center">
-            <div class="col-auto">
-                <a href="./">
-                    <?= renderImg("logo.png", "logo") ?>
-                </a>
-            </div>
-            <div class="col-auto">
-                <div class="row justify-content-center justify-content-lg-end align-items-center">
-                    <div class="col-12 col-md-auto">
-                        <a href="tel:<?= $phone_number ?>" class="btn border-white border rounded-0 text-white py-3 px-md-5">
-                            <?= $phone_number ?>
+<section class="bg-tertiary d-none d-lg-block">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-10">
+                <div class="row justify-content-center justify-content-lg-between align-items-center">
+                    <div class="col-auto">
+                        <a href="./">
+                            <?= renderImg("logo.png", "logo") ?>
                         </a>
                     </div>
-                    <div class="col-12 col-md-auto">
-                        <a href="#form" class="btn border-white border rounded-0 text-white py-3 px-md-5">
-                            enquire now
-                        </a>
+                    <div class="col-auto">
+                        <div class="row justify-content-center justify-content-lg-end align-items-center">
+                            <div class="col-12 col-md-auto">
+                                <a href="tel:<?= $phone_number ?>" class="btn border-white border rounded-0 text-white py-3 px-md-5">
+                                    <?= $phone_number ?>
+                                </a>
+                            </div>
+                            <div class="col-12 col-md-auto">
+                                <a href="#form" class="btn border-white border rounded-0 text-white py-3 px-md-5">
+                                    enquire now
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

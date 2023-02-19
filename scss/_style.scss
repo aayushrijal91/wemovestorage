@@ -4,10 +4,10 @@
 
 header {
     background: $tertiary;
-    padding: 27px 0;
 
     @include media-breakpoint-down(sm) {
         padding: 14px 0;
+        background: $teal;
     }
 
     .border {
