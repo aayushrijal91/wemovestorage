@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['token'])) {
 
     try {
         if ($recaptcha->score < 0.5) {
-            throw new Exception('Low Score');
+            throw new Exception('Something went wrong! Please try again.');
         }
 
         $to = $admin_email;
@@ -18,11 +18,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['token'])) {
 
         $subject = "Message from " . $site;
 
-        $name = $_POST['name'];
-        $phone = $_POST['phone'];
-        $email = $_POST['email'];
-        $storageSize = $_POST['storageSize'];
-        $enquiry = $_POST['enquiry'];
+        $name = strip_tags($_POST['name']);
+        $phone = strip_tags($_POST['phone']);
+        $email = strip_tags($_POST['email']);
+        $storageSize = strip_tags($_POST['storageSize']);
+        $enquiry = strip_tags($_POST['enquiry']);
 
         $message = '<!DOCTYPE html>
                 <html>
@@ -48,25 +48,65 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['token'])) {
                 <body><table><tbody>' .
             '<tr>' .
             '<td>Name</td>' .
-            '<td><b>' . strip_tags($name) . '</b></td>' .
+            '<td><b>' . $name . '</b></td>' .
             '</tr>' .
             '<tr>' .
             '<td>Phone</td>' .
-            '<td><b>' . strip_tags($phone) . '</b></td>' .
+            '<td><b>' . $phone . '</b></td>' .
             '</tr>' .
             '<tr>' .
             '<td>Email Address</td>' .
-            '<td><b>' . strip_tags($email) . '</b></td>' .
+            '<td><b>' . $email . '</b></td>' .
             '</tr>' .
             '<tr>' .
             '<td>Storage Size</td>' .
-            '<td><b>' . strip_tags($storageSize) . '</b></td>' .
+            '<td><b>' . $storageSize . '</b></td>' .
             '</tr>' .
             '<tr>' .
             '<td>Enquiry</td>' .
-            '<td><b>' . strip_tags($enquiry) . '</b></td>' .
+            '<td><b>' . $enquiry . '</b></td>' .
             '</tr>' .
             '</tbody></table></body></html>';
+
+        $api_token = '20aaf2a71a0bb24f63bbef953042fca1c9d4a9e7';
+
+        $company_domain = 'wemove';
+
+        $url = 'https://' . $company_domain . '.pipedrive.com/v1/persons?api_token=' . $api_token;
+
+        $data = array(
+            'name' => $name,
+            'phone' => $phone,
+            'email' => $email,
+            'notes' => $enquiry
+        );
+
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $output = curl_exec($ch);
+        curl_close($ch);
+
+        $result = json_decode($output, true);
+        $id = $result['data']['id'];
+
+        $url = 'https://' . $company_domain . '.pipedrive.com/v1/deals?api_token=' . $api_token;
+
+        $fields['title'] = $name;
+        $fields['43038cefa8cfb09012f966b9430b328a6633ae53'] = $storageSize;
+        $fields['person_id'] = $id;
+
+        $ch1 = curl_init();
+        curl_setopt($ch1, CURLOPT_URL, $url);
+        curl_setopt($ch1, CURLOPT_POST, true);
+        curl_setopt($ch1, CURLOPT_POSTFIELDS, $fields);
+        curl_setopt($ch1, CURLOPT_RETURNTRANSFER, true);
+        $output1 = curl_exec($ch1);
+        curl_close($ch1);
+
+        // email
 
         $headers = "MIME-Version: 1.0\r\n" .
             "Content-type: text/html; charset=utf-8\r\n" .
@@ -74,6 +114,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['token'])) {
             "Bcc: " . $bcc_email . "\r\n" .
             "Reply-To: " . $site . " <" . $email . ">" . "\r\n" .
             "X-Mailer: PHP/" . phpversion();
+
         $result = mail($to, $subject, $message, $headers);
 
         if ($result) {

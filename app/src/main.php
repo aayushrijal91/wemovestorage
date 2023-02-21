@@ -54,7 +54,7 @@
                 <div class="row gy-5">
                     <div class="col-12 position-relative">
                         <div class="price-target" target="1">
-                            <div class="text-primary lh-1 fs-60 fw-700 ls-3">$119</div>
+                            <div class="text-primary lh-1 fs-60 fw-700 ls-3">$149</div>
                             <div class="text-grey ls-3 lh-1">per month</div>
                         </div>
                         <input class="form-check-input form-control box-size" type="radio" name="smboxSize" value="1" id="smboxSize_1" checked>
@@ -76,7 +76,7 @@
                     </div>
                     <div class="col-12 position-relative">
                         <div class="price-target" target="2">
-                            <div class="text-primary lh-1 fs-60 fw-700 ls-3">$120</div>
+                            <div class="text-primary lh-1 fs-60 fw-700 ls-3">$144</div>
                             <div class="text-grey ls-3 lh-1">per month</div>
                         </div>
                         <input class="form-check-input form-control box-size" type="radio" name="smboxSize" value="2" id="smboxSize_2">
@@ -98,7 +98,7 @@
                     </div>
                     <div class="col-12 position-relative">
                         <div class="price-target" target="3">
-                            <div class="text-primary lh-1 fs-60 fw-700 ls-3">$130</div>
+                            <div class="text-primary lh-1 fs-60 fw-700 ls-3">$139</div>
                             <div class="text-grey ls-3 lh-1">per month</div>
                         </div>
                         <input class="form-check-input form-control box-size" type="radio" name="smboxSize" value="3" id="smboxSize_3">
@@ -120,7 +120,7 @@
                     </div>
                     <div class="col-12 position-relative">
                         <div class="price-target" target="4">
-                            <div class="text-primary lh-1 fs-60 fw-700 ls-3">$140</div>
+                            <div class="text-primary lh-1 fs-60 fw-700 ls-3">$134</div>
                             <div class="text-grey ls-3 lh-1">per month</div>
                         </div>
                         <input class="form-check-input form-control box-size" type="radio" name="smboxSize" value="4" id="smboxSize_4">
@@ -142,7 +142,7 @@
                     </div>
                     <div class="col-12 position-relative">
                         <div class="price-target" target="5">
-                            <div class="text-primary lh-1 fs-60 fw-700 ls-3">$150</div>
+                            <div class="text-primary lh-1 fs-60 fw-700 ls-3">$129</div>
                             <div class="text-grey ls-3 lh-1">per month</div>
                         </div>
                         <input class="form-check-input form-control box-size" type="radio" name="smboxSize" value="5" id="smboxSize_5">
@@ -164,8 +164,7 @@
                     </div>
                     <div class="col-12 position-relative">
                         <div class="price-target" target="6">
-                            <div class="text-primary lh-1 fs-60 fw-700 ls-3">$160</div>
-                            <div class="text-grey ls-3 lh-1">per month</div>
+                            <div class="text-grey ls-3 lh-1">Please<br> contact us</div>
                         </div>
                         <input class="form-check-input form-control box-size" type="radio" name="smboxSize" value="6" id="smboxSize_6">
                         <label class="form-check-label" for="smboxSize_6">
@@ -278,17 +277,16 @@
 
         <div class="text-center fs-25 ls-3 text-grey row justify-content-center align-items-center gx-0 d-none d-lg-flex">
             <div class="col-auto">you've chosen...</div>
-            <div class="text-primary fs-60 fw-700 col-lg-7 col-xl-6 lh-1">
+            <div class="text-primary fs-60 fw-700 col-lg-7 col-xl-7 lh-1">
                 <div class="price-box">
-                    <div>the mini box - 119</div>
-                    <div>the solo box - 120</div>
-                    <div>the duo box - 130</div>
-                    <div>the tri box - 140</div>
-                    <div>the family vault - 150</div>
-                    <div>the mega vault - 160</div>
+                    <div>the mini box - 149<span class="text-grey fs-25">/month</span></div>
+                    <div>the solo box - 144<span class="text-grey fs-25">/month</span></div>
+                    <div>the duo box - 139<span class="text-grey fs-25">/month</span></div>
+                    <div>the tri box - 134<span class="text-grey fs-25">/month</span></div>
+                    <div>the family vault - 129<span class="text-grey fs-25">/month</span></div>
+                    <div>the mega vault <span class="text-grey fs-25">Please contact us</span></div>
                 </div>
             </div>
-            <div class="col-auto fw-500">/month</div>
         </div>
 
         <div class="text-center pt-6">
