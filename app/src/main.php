@@ -279,11 +279,11 @@
             <div class="col-auto">you've chosen...</div>
             <div class="text-primary fs-60 fw-700 col-lg-7 col-xl-7 lh-1">
                 <div class="price-box">
-                    <div>the mini box - 149<span class="text-grey fs-25">/month</span></div>
-                    <div>the solo box - 144<span class="text-grey fs-25">/month</span></div>
-                    <div>the duo box - 139<span class="text-grey fs-25">/month</span></div>
-                    <div>the tri box - 134<span class="text-grey fs-25">/month</span></div>
-                    <div>the family vault - 129<span class="text-grey fs-25">/month</span></div>
+                    <div>the mini box - $149<span class="text-grey fs-25">/month</span></div>
+                    <div>the solo box - $144<span class="text-grey fs-25">/month</span></div>
+                    <div>the duo box - $139<span class="text-grey fs-25">/month</span></div>
+                    <div>the tri box - $134<span class="text-grey fs-25">/month</span></div>
+                    <div>the family vault - $129<span class="text-grey fs-25">/month</span></div>
                     <div>the mega vault <span class="text-grey fs-25">Please contact us</span></div>
                 </div>
             </div>
